@@ -1,0 +1,15 @@
+<div id="wrapper">
+  <button (click)="beginGame()">Start Game</button>
+  <br>
+  <div id="board-container">
+    <ng-container *ngFor="let row of gameBoard">
+      <ng-container *ngFor="let cell of row">
+        <cell [coord]="cell.coord"
+              [state]="cell.state"
+              [width]="10"
+              height="10">
+        </cell>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

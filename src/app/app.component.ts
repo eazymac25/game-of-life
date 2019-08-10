@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { State, Coord } from './cell/cell.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'game-of-life';
+
+  coord = new Coord(1, 1);
+  state = State.DEAD;
 }
